@@ -1,0 +1,50 @@
+
+@import "default-colors-size";
+
+// комментарии двумя слешами как в JS
+
+%link-template {
+  font-size: 24px;
+  border-bottom: 5px dashed red;
+}
+
+@mixin fontColor($fontSize, $color) {
+  font-size: $fontSize;
+  color: $color;
+}
+
+.block {
+  width: 300px/960px * 100%;
+  background-color: #666;
+  font-size: 30px;
+  span {
+    color: blue;
+  }
+  >p {
+    color: red;
+  }
+  .block__text {
+    font-size: $big-font-size;
+  }
+  &.block-big {
+    font-size: $big-font-size;
+  }
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+  font-size: 20px;
+  &:hover {
+    color: $color-for-hover-link;
+  }
+  .block & {
+    font-size: 80px;
+  }
+  @extend %link-template
+}
+
+.link-2 {
+  @include fontColor(30px, gray);
+  border-bottom: 10px dashed gray;
+}

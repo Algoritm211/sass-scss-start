@@ -1,0 +1,30 @@
+.link {
+  font-size: 24px;
+  border-bottom: 5px dashed red; }
+
+.block {
+  width: 31.25%;
+  background-color: #666;
+  font-size: 30px; }
+  .block span {
+    color: blue; }
+  .block > p {
+    color: red; }
+  .block .block__text {
+    font-size: 80px; }
+  .block.block-big {
+    font-size: 80px; }
+
+.link {
+  color: blue;
+  text-decoration: underline;
+  font-size: 20px; }
+  .link:hover {
+    color: chartreuse; }
+  .block .link {
+    font-size: 80px; }
+
+.link-2 {
+  font-size: 30px;
+  color: gray;
+  border-bottom: 10px dashed gray; }
